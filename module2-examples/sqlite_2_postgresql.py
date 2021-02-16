@@ -53,8 +53,7 @@ def add_characters(pg_curs, character_list):
       VALUES {};
     """
     for character in character_list:
-        insert_character_statement.format(character)
-        pg_curs.execute(insert_character_statement)
+        pg_curs.execute(insert_character_statement.format(character))
 
 
 if __name__ == "__main__":
